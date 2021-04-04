@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyMaster.master.cs" Inherits="CodingTest2.MyMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>UHCL</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+        <script src="JavaScript.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/uhclbanner.jpg" Height="154px" Width="950px"/>
+        <br />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticMenuItemStyle-ItemSpacing="50px">
+            <StaticMenuItemStyle BorderColor="Green" BorderStyle="Solid" BorderWidth="2px" HorizontalPadding="20px"/>
+            <Items>
+                <asp:MenuItem NavigateUrl="~/ComputingStudents.aspx" Text="Computing Students" Value="Computing Students"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/CourseHistory.aspx" Text="Course History" Value="Course History"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Faculty.aspx" Text="Faculty" Value="Faculty"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+
